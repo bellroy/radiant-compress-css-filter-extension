@@ -8,7 +8,7 @@ class CompressCssFilter < TextFilter
     text.gsub!(/\} +/, "}")    # collapse space
     text.gsub!(/\n$/, "")      # remove last break
     text.gsub!(/ *\{ */, "{")  # trim inside brackets
-    text.gsub!(/ *\} */, "}")  # trim inside brackets
+    text.gsub!(/ *\} */, "}\n")  # trim inside brackets, need a newline for rules that specify a .class or #id selector without tagname, i.e. }.foo would be invalid
     text.gsub!(/: +/, ":")     # collapse :<space>
     text
   end
