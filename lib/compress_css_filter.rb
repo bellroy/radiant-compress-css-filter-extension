@@ -1,5 +1,6 @@
 class CompressCssFilter < TextFilter
   filter_name "CompressCss"
+  description "Cleans whitespace and removes comments from served CSS"
 
   def filter(text)
     text.gsub!(/\/\*(.*?)\*\/\n*/, "") # remove comments

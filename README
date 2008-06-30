@@ -1,3 +1,6 @@
 = Compress CSS Filter
 
-Description goes here
+When installed will 'compress' (eg. filter out whitespace and comments) stylesheets that are served to the client.
+
+== Usage
+Simply select 'CompressCSS' as the Filter for the page to which you would like it applied.
